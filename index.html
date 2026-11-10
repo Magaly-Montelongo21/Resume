@@ -185,63 +185,57 @@
             <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-cyan-500/10 dark:bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                <div class="space-y-4 max-w-3xl">
+                <div class="flex flex-col sm:flex-row items-start gap-6 max-w-3xl">
                     
-                    <!-- Availability & Position Badges -->
-                    <div class="flex flex-wrap items-center gap-2">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Perfil Comercial Senior (+12 Años Exp)
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30">
-                            <i class="fa-solid fa-earth-americas text-xs"></i>
-                            Experiencia Internacional
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30">
-                            <i class="fa-solid fa-language text-xs"></i>
-                            Bilingüe (Español / Inglés C1)
-                        </span>
+                    <!-- 120x120 Profile Image Placeholder -->
+                    <div class="shrink-0 relative group">
+                        <img src="media/forolinkedin.jpg" 
+                             alt="Magaly Montelongo" 
+                             class="w-[120px] h-[140px] min-w-[120px] min-h-[120px] rounded-2xl border-2 border-emerald-500/40 object-cover shadow-lg shadow-emerald-950/40"
+                             onerror="this.onerror=null; this.src='https://placehold.co/120x120/1e293b/10b981?text=Foto';" />
                     </div>
 
-                    <!-- Name and Professional Title -->
-                    <div>
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                            MAGALY MONTELONGO POBLANO
-                        </h1>
-                        <p class="text-lg sm:text-xl font-bold gradient-text mt-1">
-                            Business Development Manager | Key Account Manager Senior | Supply Chain & Logistics Expert
+                    <div class="space-y-4 flex-1">
+                        <!-- Name and Professional Title -->
+                        <div>
+                            <h1 class="text-2xl sm:text-2xl md:text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                                MAGALY MONTELONGO POBLANO
+                            </h1>
+                            <p class="text-sm sm:text-lg font-bold gradient-text mt-1">
+                                Business Development Manager | Key Account Manager Senior | Supply Chain & Logistics Expert
+                            </p>
+                        </div>
+
+                        <!-- Summary Paragraph -->
+                        <p class="text-slate-400 dark:text-slate-300 text-xs sm:text-base leading-relaxed">
+                            Perfil comercial senior con +12 años de experiencia internacional liderando Business Development y Key Account Management en freight forwarding, carga aérea y retail. Ingeniera en Transporte y Logística con MBA y mentalidad <strong class="text-emerald-600 dark:text-emerald-400 font-semibold">hunter</strong>, experta en apertura de cuentas globales, negociación de contratos complejos y aceleración de ingresos. Destaco por traducir la complejidad operativa en ventajas comerciales competitivas.
                         </p>
-                    </div>
 
-                    <!-- Summary Paragraph -->
-                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Perfil comercial senior con +12 años de experiencia internacional liderando Business Development y Key Account Management en freight forwarding, carga aérea y retail. Ingeniera en Transporte y Logística con MBA y mentalidad <strong class="text-emerald-600 dark:text-emerald-400 font-semibold">hunter</strong>, experta en apertura de cuentas globales, negociación de contratos complejos y aceleración de ingresos. Destaco por traducir la complejidad operativa en ventajas comerciales competitivas.
-                    </p>
+                        <!-- Contact Details Pills Grid -->
+                        <div class="pt-2 flex flex-wrap gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <a href="https://maps.google.com/?q=Madrid,Spain" target="_blank" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-location-dot text-emerald-500"></i>
+                                <span>Madrid, España</span>
+                            </a>
 
-                    <!-- Contact Details Pills Grid -->
-                    <div class="pt-2 flex flex-wrap gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                        <a href="https://maps.google.com/?q=Madrid,Spain" target="_blank" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
-                            <i class="fa-solid fa-location-dot text-emerald-500"></i>
-                            <span>Madrid, España</span>
-                        </a>
+                            <button onclick="copyToClipboard('+34604878426', 'Teléfono copiado')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-phone text-emerald-500"></i>
+                                <span>+34 604 87 84 26</span>
+                                <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
+                            </button>
 
-                        <button onclick="copyToClipboard('+34604878426', 'Teléfono copiado')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
-                            <i class="fa-solid fa-phone text-emerald-500"></i>
-                            <span>+34 604 87 84 26</span>
-                            <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
-                        </button>
+                            <button onclick="copyToClipboard('mmontelo21@gmail.com', 'Correo copiado')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-envelope text-emerald-500"></i>
+                                <span>mmontelo21@gmail.com</span>
+                                <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
+                            </button>
 
-                        <button onclick="copyToClipboard('mmontelo21@gmail.com', 'Correo copiado')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
-                            <i class="fa-solid fa-envelope text-emerald-500"></i>
-                            <span>mmontelo21@gmail.com</span>
-                            <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
-                        </button>
-
-                        <a href="https://www.linkedin.com/in/magaly-montelongo-bb9883152" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition text-cyan-600 dark:text-cyan-400 font-medium">
-                            <i class="fa-brands fa-linkedin text-cyan-500"></i>
-                            <span>linkedin.com/in/magaly-montelongo</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
-                        </a>
+                            <a href="https://www.linkedin.com/in/magaly-montelongo-bb9883152" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition text-cyan-600 dark:text-cyan-400 font-medium">
+                                <i class="fa-brands fa-linkedin text-cyan-500"></i>
+                                <span>linkedin.com/in/magaly-montelongo</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
