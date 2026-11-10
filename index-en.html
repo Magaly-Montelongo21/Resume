@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magaly Montelongo Poblano | Business Development Manager & Key Account Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            accent: '#06b6d4',
+                            gold: '#f59e0b'
+                        },
+                        darkbg: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                            600: '#475569'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles & Glassmorphism */
+        .glass-header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .light .glass-header {
+            background: rgba(255, 255, 255, 0.90);
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .light .metric-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Smooth tab transition */
+        .tab-btn.active {
+            background-color: #10b981;
+            color: #ffffff;
+            border-color: #10b981;
+        }
+
+        /* Print Stylesheet for clean export */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 11pt;
+            }
+            .no-print, nav, #quick-actions, .filter-container, #toast, .action-btn {
+                display: none !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .shadow-xl, .shadow-lg, .shadow-md {
+                box-shadow: none !important;
+            }
+            .darkbg-800, .bg-slate-900, .bg-slate-800, .bg-slate-950 {
+                background-color: #ffffff !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+            .text-white, .text-slate-100, .text-slate-200, .text-slate-300 {
+                color: #0f172a !important;
+            }
+            .text-slate-400, .text-slate-500 {
+                color: #475569 !important;
+            }
+            .metric-card {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            .gradient-text {
+                background: none !important;
+                -webkit-text-fill-color: #047857 !important;
+                color: #047857 !important;
+            }
+            a {
+                text-decoration: none !important;
+                color: #0f172a !important;
+            }
+            .border-slate-700, .border-slate-800 {
+                border-color: #e2e8f0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen font-body transition-colors duration-300">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-msg" class="font-medium">Copied to clipboard</span>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <nav class="sticky top-0 z-40 glass-header border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                    MM
+                </div>
+                <div>
+                    <span class="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white block leading-none">
+                        MAGALY MONTELONGO
+                    </span>
+                    <span class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold tracking-wider uppercase">
+                        Business Development & KAM
+                    </span>
+                </div>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#perfil" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Profile</a>
+                <a href="#impacto" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Key Impact</a>
+                <a href="#competencias" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Competencies</a>
+                <a href="#experiencia" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Experience</a>
+                <a href="#formacion" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Education</a>
+            </div>
+
+            <!-- Header Controls -->
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="Toggle theme">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                </button>
+
+                <!-- PDF Print Button -->
+                <button onclick="window.print()" class="no-print hidden sm:flex items-center space-x-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wide shadow-lg shadow-emerald-900/20 transition transform active:scale-95">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>PDF / Print</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- HERO / HEADER SECTION -->
+        <section class="bg-slate-900/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden backdrop-blur-md">
+            <!-- Decorative Subtle Accent Glow -->
+            <div class="absolute -top-24 -right-24 w-80 h-80 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-cyan-500/10 dark:bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <div class="flex flex-col sm:flex-row items-start gap-6 max-w-3xl">
+                    
+                    <!-- 120x120 Profile Image Placeholder -->
+                    <div class="shrink-0 relative group">
+                        <img src="media/forolinkedin.jpg" 
+                             alt="Magaly Montelongo Poblano" 
+                             class="w-[120px] h-[140px] min-w-[120px] min-h-[120px] rounded-2xl border-2 border-emerald-500/40 object-cover shadow-lg shadow-emerald-950/40"
+                             onerror="this.onerror=null; this.src='https://placehold.co/120x120/1e293b/10b981?text=Photo';" />
+                    </div>
+
+                    <div class="space-y-4 flex-1">
+                        <!-- Name and Professional Title -->
+                        <div>
+                            <h1 class="text-2xl sm:text-2xl md:text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                                MAGALY MONTELONGO POBLANO
+                            </h1>
+                            <p class="text-sm sm:text-lg font-bold gradient-text mt-1">
+                                Business Development Manager | Senior Key Account Manager | Supply Chain & Logistics Expert
+                            </p>
+                        </div>
+
+                        <!-- Summary Paragraph -->
+                        <p class="text-slate-400 dark:text-slate-300 text-xs sm:text-base leading-relaxed">
+                            Senior commercial profile with over 12 years of international experience in Business Development and Key Account Management across freight forwarding, air cargo, and retail sectors. Logistics and Transport Engineer with an MBA, bringing a strong <strong class="text-emerald-600 dark:text-emerald-400 font-semibold">hunter</strong> mindset and proven track record in business development and strategic account management. Combining commercial vision with operational expertise to drive revenue growth, customer retention, and cross-functional stakeholder leadership in multicultural environments. Bilingual Spanish-English.
+                        </p>
+
+                        <!-- Contact Details Pills Grid -->
+                        <div class="pt-2 flex flex-wrap gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <a href="https://maps.google.com/?q=Madrid,Spain" target="_blank" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-location-dot text-emerald-500"></i>
+                                <span>Madrid</span>
+                            </a>
+
+                            <button onclick="copyToClipboard('+34604878426', 'Phone copied')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-phone text-emerald-500"></i>
+                                <span>+34 604 87 84 26</span>
+                                <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
+                            </button>
+
+                            <button onclick="copyToClipboard('mmontelo21@gmail.com', 'Email copied')" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 transition">
+                                <i class="fa-solid fa-envelope text-emerald-500"></i>
+                                <span>mmontelo21@gmail.com</span>
+                                <i class="fa-regular fa-copy text-xs text-slate-400 ml-1"></i>
+                            </button>
+
+                            <a href="https://www.linkedin.com/in/magaly-montelongo-bb9883152" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition text-cyan-600 dark:text-cyan-400 font-medium">
+                                <i class="fa-brands fa-linkedin text-cyan-500"></i>
+                                <span>linkedin.com/in/magaly-montelongo-bb9883152</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons Box -->
+                <div id="quick-actions" class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 no-print">
+                    <a href="mailto:mmontelo21@gmail.com" class="action-btn flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-semibold text-sm shadow-lg shadow-emerald-900/30 transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </a>
+
+                    <a href="https://wa.me/34604878426" target="_blank" class="action-btn flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 text-emerald-400 border border-emerald-500/30 font-semibold text-sm transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Contact via WhatsApp</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/magaly-montelongo-bb9883152" target="_blank" class="action-btn flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition">
+                        <i class="fa-brands fa-linkedin text-blue-400"></i>
+                        <span>View LinkedIn Profile</span>
+                    </a>
+
+                    <button onclick="window.print()" class="action-btn sm:hidden flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-slate-800 text-slate-300 border border-slate-700 font-semibold text-sm">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Export PDF</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHT METRICS GRID -->
+        <section id="impacto" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="metric-card rounded-2xl p-5 text-center transition hover:scale-105 duration-200">
+                <div class="text-3xl sm:text-4xl font-extrabold text-emerald-500 mb-1">+12 Years</div>
+                <div class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">International Experience</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Freight Forwarding, Air Cargo & Retail</div>
+            </div>
+
+            <div class="metric-card rounded-2xl p-5 text-center transition hover:scale-105 duration-200">
+                <div class="text-3xl sm:text-4xl font-extrabold text-cyan-500 mb-1">$7.48M USD</div>
+                <div class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Acquisition & BSA Contracts</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">General Motors (GM) at Aeroméxico</div>
+            </div>
+
+            <div class="metric-card rounded-2xl p-5 text-center transition hover:scale-105 duration-200">
+                <div class="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-1">55%</div>
+                <div class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Total Airline Revenue</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Control of 15 Global Key Accounts</div>
+            </div>
+
+            <div class="metric-card rounded-2xl p-5 text-center transition hover:scale-105 duration-200">
+                <div class="text-3xl sm:text-4xl font-extrabold text-purple-500 mb-1">€87.5K</div>
+                <div class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Annual Savings (e-CMR)</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Digital Transformation at Leroy Merlin</div>
+            </div>
+        </section>
+
+        <!-- EXECUTIVE PROFILE CARD -->
+        <section id="perfil" class="bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                    Executive Profile
+                </h2>
+            </div>
+            
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                Senior commercial profile with over 12 years of international experience in Business Development and Key Account Management across freight forwarding, air cargo, and retail sectors. Logistics and Transport Engineer with an MBA, bringing a strong hunter mindset and proven track record in business development and strategic account management. Combining commercial vision with operational expertise to drive revenue growth, customer retention, and cross-functional stakeholder leadership in multicultural environments. Bilingual Spanish-English.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <div class="text-emerald-400 font-bold text-sm mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs"></i> Hunter Mindset & KAM
+                    </div>
+                    <p class="text-xs text-slate-300">
+                        Business development, strategic B2B prospecting, BSA agreements, high-volume corporate contracts, and global key account management (Kuehne+Nagel, DSV, Hellmann).
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <div class="text-cyan-400 font-bold text-sm mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code"></i> Digital Transformation
+                    </div>
+                    <p class="text-xs text-slate-300">
+                        Implementation of logistics solutions: TMS (Oracle), YMS, WMS (SaaS-Generix), Shippeo (Track & Trace), and project management in Jira.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <div class="text-purple-400 font-bold text-sm mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-plane-departure"></i> Air Cargo & Multimodal
+                    </div>
+                    <p class="text-xs text-slate-300">
+                        Complex cargo operations (DGD, Pharma COVID, PAX-to-CAO, Automotive, Perishables), ocean/road/rail logistics, and Incoterms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE COMPETENCIES & TECHNOLOGIES -->
+        <section id="competencias" class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-500 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                        Other Competencies & Technology
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Grid of Skill Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Systems & Software -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <h3 class="text-base font-bold text-emerald-400 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-microchip"></i> Systems & Software
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">WMS (SaaS-Generix)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">TMS (Oracle)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Salesforce</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Shippeo</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Jira</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Microsoft Office</span>
+                    </div>
+                </div>
+
+                <!-- Strategic Competencies -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <h3 class="text-base font-bold text-cyan-400 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-chart-line"></i> Key Competencies & Management
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Business Development & Acquisition (Hunting & Farming)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Key Account Management (KAM)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Commercial Strategy</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Team Leadership</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Logistics Governance</span>
+                    </div>
+                </div>
+
+                <!-- Logistics Operations -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <h3 class="text-base font-bold text-amber-400 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-boxes-packing"></i> Logistics & Multimodal Transport
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Ocean & Air Freight</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Multimodal Transport</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Freight Forwarding</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">BSA & Interline Agreements</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Regulated Cargo (DGD, Pharma, Automotive)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Tenders (RFPs)</span>
+                    </div>
+                </div>
+
+                <!-- Languages & Education -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <h3 class="text-base font-bold text-purple-400 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i> Languages & Education
+                    </h3>
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div class="flex justify-between items-center bg-slate-800 p-2.5 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">Spanish</span>
+                            <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold text-xs">Native</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-800 p-2.5 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">English</span>
+                            <span class="px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 font-semibold text-xs">C1 - Professional</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-800 p-2.5 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">MBA (Master in Business Administration)</span>
+                            <span class="text-slate-400 text-xs">Universidad Europea de Madrid</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL EXPERIENCE TIMELINE -->
+        <section id="experiencia" class="space-y-6">
+            
+            <!-- Section Title and Filters -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                        Professional Experience
+                    </h2>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="filter-container flex flex-wrap gap-2 no-print">
+                    <button onclick="filterExperience('all')" class="tab-btn active px-3 py-1.5 rounded-xl border border-slate-700 text-xs font-semibold transition">
+                        All
+                    </button>
+                    <button onclick="filterExperience('retail')" class="tab-btn px-3 py-1.5 rounded-xl border border-slate-700 text-slate-300 text-xs font-semibold hover:border-emerald-500 transition">
+                        Retail & B2B
+                    </button>
+                    <button onclick="filterExperience('airline')" class="tab-btn px-3 py-1.5 rounded-xl border border-slate-700 text-slate-300 text-xs font-semibold hover:border-emerald-500 transition">
+                        Air Cargo & Airlines
+                    </button>
+                    <button onclick="filterExperience('freight')" class="tab-btn px-3 py-1.5 rounded-xl border border-slate-700 text-slate-300 text-xs font-semibold hover:border-emerald-500 transition">
+                        Freight Forwarding
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timeline Cards -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-8 before:w-0.5 before:bg-slate-800">
+
+                <!-- ROLE 1: LEROY MERLIN -->
+                <div class="experience-card relative pl-10 sm:pl-16" data-category="retail">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-slate-950"></div>
+
+                    <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition shadow-lg space-y-4">
+                        
+                        <!-- Role Header -->
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                            <div>
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <h3 class="text-lg sm:text-xl font-bold text-white">
+                                        Project Manager | Digital Transformation & Performance (B2B Transport)
+                                    </h3>
+                                </div>
+                                <div class="text-emerald-400 font-semibold text-sm mt-0.5">
+                                    Leroy Merlin - Madrid <span class="text-slate-400 font-normal">| Retail/Logistics Sector | TMS, YMS, WMS, Shippeo, Jira</span>
+                                </div>
+                            </div>
+                            <div class="text-left md:text-right shrink-0">
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                                    Apr 23 – Jun 26 (3 years)
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Key Results Box -->
+                        <div class="bg-emerald-950/30 border border-emerald-500/30 rounded-xl p-4 space-y-2">
+                            <div class="text-xs uppercase tracking-wider font-extrabold text-emerald-400 flex items-center gap-2">
+                                <i class="fa-solid fa-trophy"></i> Key Achievements & Strategic Impact:
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>100% Automation:</strong> B2B transport orders migrated from Excel to TMS (Oracle).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>€87.5K/year Savings:</strong> Digitalization of consignment note (e-CMR) and elimination of 240K annual documents.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>70% Track & Trace:</strong> Real-time Shippeo implementation for warehouses and stores.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>-15% Cost Reduction:</strong> Benchmarking and leadership of strategic tenders.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Detailed Responsibilities -->
+                        <div class="text-slate-300 text-xs sm:text-sm space-y-2 leading-relaxed">
+                            <p>
+                                Responsible for leading the digital transformation and optimization of the B2B transport network, aimed at maximizing operational efficiency and reducing costs through the implementation of TMS and track & trace solutions. Cross-functional coordination of local and international teams and participation in corporate logistics governance.
+                            </p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                                <li>Automated 100% of B2B transport orders from Excel to TMS (Oracle), automating billing, eliminating errors, and enabling real-time reporting.</li>
+                                <li>Generated annual savings of €87.5K through consignment note digitalization (e-CMR), eliminating operational, storage, and printing costs, while removing a physical archive of 240K documents per year.</li>
+                                <li>Transformed warehouse and store operations by implementing Shippeo, achieving 70% real-time track & trace to anticipate incidents and optimize operational decision-making.</li>
+                                <li>Developed analysis and benchmarking processes to lead strategic tenders, achieving a 15% cost reduction through rigorous technological vendor selection.</li>
+                                <li>Led internal and international stakeholders without direct authority, driving supply chain digital transformation through strong influence in cross-functional environments.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tech Badges -->
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">TMS (Oracle)</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Shippeo</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">WMS (Generix)</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">YMS</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Jira</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROLE 2: AEROMEXICO CARGO -->
+                <div class="experience-card relative pl-10 sm:pl-16" data-category="airline">
+                    <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 ring-4 ring-slate-950"></div>
+
+                    <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition shadow-lg space-y-4">
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">
+                                    Key Account Manager | Global Accounts and Commercial Performance
+                                </h3>
+                                <div class="text-cyan-400 font-semibold text-sm mt-0.5">
+                                    Aeroméxico Cargo – Mexico City <span class="text-slate-400 font-normal">| Aviation Sector (Leading Airline in Mexico) | Salesforce</span>
+                                </div>
+                            </div>
+                            <div class="text-left md:text-right shrink-0">
+                                <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-semibold">
+                                    Feb 18 – Oct 22 (4 years)
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Key Impact Box -->
+                        <div class="bg-cyan-950/30 border border-cyan-500/30 rounded-xl p-4 space-y-2">
+                            <div class="text-xs uppercase tracking-wider font-extrabold text-cyan-400 flex items-center gap-2">
+                                <i class="fa-solid fa-chart-line"></i> Milestones & Commercial Impact:
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                    <span><strong>$7.48M USD BSA Agreements:</strong> General Motors (GM) 2,080 tons/year of auto parts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                    <span><strong>55% Airline Revenue:</strong> Direct control of 15 global freight forwarder accounts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                    <span><strong>$252K USD COVID Charters:</strong> Execution of 3 Pfizer vaccine charter flights (PAX-to-CAO).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                    <span><strong>Multinational Accounts:</strong> Strategic negotiation with Kuehne+Nagel, DSV, Hellmann.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-slate-300 text-xs sm:text-sm space-y-2 leading-relaxed">
+                            <p>
+                                Managed a global portfolio of high-impact accounts, securing $7.48M USD in revenue and controlling 55% of the airline's total revenue. The role required strategic negotiation, demand analysis, pipeline tracking, cross-functional coordination, and results-oriented reporting in a highly complex environment.
+                            </p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                                <li>Captured $252K USD in additional revenue by executing 3 charter flights for COVID vaccines (Pfizer), converting passenger aircraft to cargo (PAX-to-CAO), ensuring cold chain integrity from origin to destination.</li>
+                                <li>Closed $7.48M USD BSA agreements: Maximized yield and fleet utilization on high-demand South American routes by securing an annual volume of 2,080 tons of auto parts for General Motors (GM) at a rate of $3.60 USD/kg.</li>
+                                <li>Generated 55% of the airline's total revenue across 15 global freight forwarder accounts (Kuehne+Nagel, DSV, Hellmann), focusing on commercial performance and segmentation.</li>
+                                <li>Managed complex and regulated cargo operations: Demonstrated specialized technical expertise handling Dangerous Goods (DGD), pharmaceuticals, automotive, perishables, general cargo, and human remains (HUM).</li>
+                                <li>Led forecasting and pipeline visibility: Implemented strict KPI tracking in Salesforce and demand planning, aligning commercial volume with fleet operational capacity in real time.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Salesforce</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">BSA Agreements</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">PAX-to-CAO Charters</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Regulated Cargo (DGD/Pharma)</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Global KAM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROLE 3: ETERNITY INTERNATIONAL -->
+                <div class="experience-card relative pl-10 sm:pl-16" data-category="freight">
+                    <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-slate-950"></div>
+
+                    <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition shadow-lg space-y-4">
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">
+                                    Sales Executive | Supply Chain & Business Development
+                                </h3>
+                                <div class="text-amber-400 font-semibold text-sm mt-0.5">
+                                    Eternity International – Mexico City <span class="text-slate-400 font-normal">| Logistics Sector (Freight Forwarder)</span>
+                                </div>
+                            </div>
+                            <div class="text-left md:text-right shrink-0">
+                                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold">
+                                    Jan 16 – Dec 17 (2 years)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-950/30 border border-amber-500/30 rounded-xl p-4 space-y-2">
+                            <div class="text-xs uppercase tracking-wider font-extrabold text-amber-400 flex items-center gap-2">
+                                <i class="fa-solid fa-piggy-bank"></i> Commercial Growth Achievements:
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
+                                    <span><strong>$1.9M USD New Revenue:</strong> Generated across multimodal cargo services.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
+                                    <span><strong>+35% Portfolio Expansion:</strong> Growth into new markets and international routes.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
+                                    <span><strong>10+ Corporate Accounts/Year:</strong> Maintaining stable 12% to 15% operating margins.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
+                                    <span><strong>20-25 Key Accounts Retained:</strong> Securing recurring revenue (hunting & farming).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-slate-300 text-xs sm:text-sm space-y-2 leading-relaxed">
+                            <p>
+                                Designed commercial growth and market penetration strategies for multimodal cargo services (air, ocean, road, and rail), generating $1.9M USD in new revenue through strategic route development and high-volume corporate contract negotiations.
+                            </p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                                <li>Increased active client portfolio by 35%, driving expansion into new markets and international multimodal transport routes through strategic B2B prospecting.</li>
+                                <li>Acquired over 10 corporate accounts annually, ensuring stable operational margins between 12% and 15% for new business lines.</li>
+                                <li>Managed a recurring base of 20 to 25 key accounts through a hybrid model (hunting & farming), securing high-value strategic revenue for the company.</li>
+                                <li>Led tender processes (RFPs) for large-volume corporate contract awards, optimizing conversion rates and opportunity tracking via CRM.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Freight Forwarding</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Multimodal Cargo</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Hunting & Farming</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Tenders / RFPs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROLE 4: INTERJET -->
+                <div class="experience-card relative pl-10 sm:pl-16" data-category="airline">
+                    <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-slate-950"></div>
+
+                    <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition shadow-lg space-y-4">
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">
+                                    Air Cargo Sales & Operations
+                                </h3>
+                                <div class="text-purple-400 font-semibold text-sm mt-0.5">
+                                    Interjet – Mexico City <span class="text-slate-400 font-normal">| Aviation Sector (Mexican Airline)</span>
+                                </div>
+                            </div>
+                            <div class="text-left md:text-right shrink-0">
+                                <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold">
+                                    Jan 15 – Dec 15 (1 year)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-950/30 border border-purple-500/30 rounded-xl p-4 space-y-2">
+                            <div class="text-xs uppercase tracking-wider font-extrabold text-purple-400 flex items-center gap-2">
+                                <i class="fa-solid fa-plane"></i> Performance & Strategic Alliances:
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                                    <span><strong>+15% Route Profitability:</strong> On a managed business volume of USD 800K–1.2M.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                                    <span><strong>British Airways Alliance:</strong> Negotiation and consolidation of interline agreements (IAG Group).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                                    <span><strong>+12% Load Factor:</strong> Capacity optimization in coordination with Operations and Ramp.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-slate-300 text-xs sm:text-sm space-y-2 leading-relaxed">
+                            <p>
+                                Managed full commercial and operational direction for air cargo, increasing international route profitability by 15% through closing global contracts, developing strategic interline alliances, and optimizing fleet load factors.
+                            </p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                                <li>Increased profitability of key international routes by 15% over a managed business volume of USD 800K–1.2M, optimizing cargo capacity and commercial strategy.</li>
+                                <li>Negotiated and consolidated key international alliances with British Airways (IAG Group) for interline agreements, optimizing distribution channels and inbound cargo flows.</li>
+                                <li>Elevated operational efficiency and load factor by 12% through demand analysis and performance metrics in direct coordination with Operations and Ramp teams.</li>
+                                <li>Designed and supervised key business indicators (KPIs), translating complex data into dashboards and strategic reports to guide executive decision-making.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Air Cargo</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Interline Agreements</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">British Airways (IAG Group)</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Operations & Ramp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROLE 5: DHL GLOBAL FORWARDING -->
+                <div class="experience-card relative pl-10 sm:pl-16" data-category="freight">
+                    <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-slate-950"></div>
+
+                    <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition shadow-lg space-y-4">
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">
+                                    Export Operations | Ocean & Multimodal Logistics
+                                </h3>
+                                <div class="text-blue-400 font-semibold text-sm mt-0.5">
+                                    DHL Global Forwarding – Mexico City <span class="text-slate-400 font-normal">| Logistics Sector (Global Freight Forwarder)</span>
+                                </div>
+                            </div>
+                            <div class="text-left md:text-right shrink-0">
+                                <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold">
+                                    May 13 – Dec 14 (1.7 years)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-950/30 border border-blue-500/30 rounded-xl p-4 space-y-2">
+                            <div class="text-xs uppercase tracking-wider font-extrabold text-blue-400 flex items-center gap-2">
+                                <i class="fa-solid fa-ship"></i> Ocean Operations & Control:
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                                    <span><strong>+400 Annual Bookings:</strong> End-to-end coordination of ocean and multimodal operations.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                                    <span><strong>20% - 25% Reduction in Claims:</strong> Implementation of quality controls and cost mitigation.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                                    <span><strong>Top Global Ocean Carriers:</strong> Space capacity negotiation with CMA CGM, Hapag-Lloyd, and Maersk.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-slate-300 text-xs sm:text-sm space-y-2 leading-relaxed">
+                            <p>
+                                Coordinated end-to-end execution of ocean and multimodal operations for Americas and European markets, reducing B2B claims by 20% to 25% through strict KPI monitoring, process auditing, and corrective action in complex environments.
+                            </p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                                <li>Managed ocean and multimodal operations for international clients, coordinating over 400 annual bookings.</li>
+                                <li>Negotiated space allocations with global ocean carriers such as CMA CGM, Hapag-Lloyd, and Maersk, optimizing operational capacity and shipment planning continuity.</li>
+                                <li>Ensured daily operational visibility and control by monitoring KPIs for timeliness, incidents, and claims, applying corrective actions that reduced B2B claims by 20% to 25% and minimized extra costs.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">DHL Global Forwarding</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Ocean Logistics</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Maersk / CMA CGM / Hapag-Lloyd</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">KPI Control</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION & QUALIFICATIONS -->
+        <section id="formacion" class="space-y-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-500 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                    Education & Qualifications
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- MBA Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 text-xs font-bold uppercase">
+                                Official Master's Degree
+                            </span>
+                            <span class="text-xs text-slate-400 font-semibold">2022 - 2023</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">
+                            MBA (Master in Business Administration)
+                        </h3>
+                        <p class="text-emerald-400 text-sm font-semibold">
+                            Universidad Europea de Madrid, Spain
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Comprehensive executive education focusing on strategic business management, corporate finance, governance, executive leadership, and global business development.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center text-xs text-slate-300 gap-2">
+                        <i class="fa-solid fa-award text-amber-400"></i>
+                        <span>Official European University Accreditation</span>
+                    </div>
+                </div>
+
+                <!-- Engineering Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs font-bold uppercase">
+                                Engineering Degree
+                            </span>
+                            <span class="text-xs text-slate-400 font-semibold">2009 - 2014</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">
+                            B.S. in Transport & Logistics Engineering
+                        </h3>
+                        <p class="text-cyan-400 text-sm font-semibold">
+                            Instituto Politécnico Nacional, Mexico
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Technical training in supply chain design, multimodal transport engineering, logistics network optimization, and global operations management.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center text-xs text-slate-300 gap-2">
+                        <i class="fa-solid fa-certificate text-cyan-400"></i>
+                        <span>Professional Engineering Degree</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACT BANNER -->
+        <footer class="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-6">
+            <div class="max-w-2xl mx-auto space-y-3">
+                <h3 class="text-2xl font-extrabold text-white">
+                    Interested in working together?
+                </h3>
+                <p class="text-slate-400 text-sm">
+                    Magaly is based in Madrid, available for executive leadership roles in Business Development, KAM Senior, and B2B Logistics Leadership.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <a href="mailto:mmontelo21@gmail.com" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-900/30 transition">
+                    <i class="fa-solid fa-envelope mr-2"></i> mmontelo21@gmail.com
+                </a>
+                <a href="https://wa.me/34604878426" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/30 font-bold text-sm transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> +34 604 87 84 26
+                </a>
+                <a href="https://www.linkedin.com/in/magaly-montelongo-bb9883152" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-cyan-500/30 font-bold text-sm transition">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn Profile
+                </a>
+            </div>
+
+            <div class="text-xs text-slate-500 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <span>© Magaly Montelongo Poblano - Executive Curriculum Vitae</span>
+                <span>Madrid | International Experience</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Copy to clipboard helper
+        function copyToClipboard(text, message) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => showToast(message));
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast(message);
+                } catch (err) {
+                    console.error('Error copying text: ', err);
+                }
+                document.body.removeChild(textarea);
+            }
+        }
+
+        // Toast notification logic
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Theme Toggle logic
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Set initial theme based on preference or system
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+
+        // Interactive Filter for Experience Roles
+        function filterExperience(category) {
+            const cards = document.querySelectorAll('.experience-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+
+            // Filter cards
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
